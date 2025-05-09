@@ -46,8 +46,9 @@ git submodule init && git submodule update
 	python ./dino/ops/setup.py build install
 	python ./dino/ops/test.py
 	
-	cd  DTLR/models/
-	python models/dino/ops/setup.py build install
-	python models/dino/ops/test.py
+	# ACTUALLY it's useless to build the DTLR cuda operators since they were aldready built in LinePredictor
+	# cd  DTLR/models/
+	# python models/dino/ops/setup.py build install
+	# python models/dino/ops/test.py
 	```
 
