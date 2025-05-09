@@ -1,3 +1,6 @@
 [submodule "LinePredictor"]
 	path = LinePredictor
 	url = git@github.com:raphael-baena/LinePredictor.git
+[submodule "DTLR"]
+	path = DTLR
+	url = git@github.com:paulhectork/DTLR.git
