@@ -6,6 +6,7 @@ A character detection pipeline based on [DTLR](https://github.com/raphael-baena/
 
 ```
 root/
+ |_data           # input files go here
  |_DTLR           # step 2: character detection
  |_LinePredictor  # step 1: line detection
 ```
