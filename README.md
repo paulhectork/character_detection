@@ -13,7 +13,7 @@ root/
  |_LinePredictor              # step 1: line detection
 ```
 
-## SETUP
+## SETUP AND USE
 
 ### Clone
 
@@ -54,4 +54,12 @@ git submodule init && git submodule update
 	# python models/dino/ops/setup.py build install
 	# python models/dino/ops/test.py
 	```
+
+## USE
+
+Use the scripted install:
+
+```bash
+bash pipeline.sh
+```
 
