@@ -1,0 +1,3 @@
+[submodule "LinePredictor"]
+	path = LinePredictor
+	url = git@github.com:raphael-baena/LinePredictor.git

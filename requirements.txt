@@ -1,0 +1,23 @@
+torchvision
+cython
+wheel
+ipykernel
+pandas
+--extra-index-url https://download.pytorch.org/whl/cu124
+scikit-image
+submitit
+scipy<1.13
+pytorch-ignite
+yapf==0.3
+opencv-python
+timm
+git+https://github.com/cocodataset/panopticapi.git#egg=panopticapi
+numpy
+wandb
+tqdm
+editdistance
+termcolor
+pycocotools
+Pillow>=10.0
+addict
+torch>=2.2
