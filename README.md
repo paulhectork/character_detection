@@ -6,11 +6,11 @@ A character detection pipeline based on [DTLR](https://github.com/raphael-baena/
 
 ```
 root/
- |_data                  # input files go here
- |_data_line_prediction  # output from step 1
- |_data_line_detection   # output from step 2
- |_DTLR                  # step 2: character detection
- |_LinePredictor         # step 1: line detection
+ |_data                       # input files go here
+ |_data_line_prediction       # output from step 1
+ |_data_character_detection   # output from step 2
+ |_DTLR                       # step 2: character detection
+ |_LinePredictor              # step 1: line detection
 ```
 
 ## SETUP
