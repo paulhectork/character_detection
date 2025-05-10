@@ -38,7 +38,7 @@ while getopts 'sh' flag; do
     case "${flag}" in
         s) SAMPLE=true;;
         h) print_usage
-           exit 1;;
+           exit 0;;
         *) print_usage
            exit 1;;
     esac
