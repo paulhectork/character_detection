@@ -1,6 +1,6 @@
 # CHARACTER DETECTION
 
-A character detection pipeline based on [DTLR](https://github.com/raphael-baena/DTLR)
+A character detection pipeline based on [DTLR](https://github.com/raphael-baena/DTLR). Most of the work is done in the submodules.
 
 ## STRUCTURE
 
