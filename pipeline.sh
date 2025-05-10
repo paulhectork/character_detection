@@ -14,7 +14,7 @@ DATA_DTLR_DIR="$SCRIPT_DIR"/data_character_detection
 LP_DIR="$SCRIPT_DIR"/LinePredictor
 DTLR_DIR="$SCRIPT_DIR"/DTLR
 
-SAMPLE=False
+SAMPLE=false
 
 # ---------------------------------------
 # functions
@@ -34,9 +34,11 @@ EOF
 # ---------------------------------------
 # process
 
-while getopts 's' flag; do
+while getopts 'sh' flag; do
     case "${flag}" in
-        s) SAMPLE=True;;
+        s) SAMPLE=true;;
+        h) print_usage
+           exit 1;;
         *) print_usage
            exit 1;;
     esac
