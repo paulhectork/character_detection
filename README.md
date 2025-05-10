@@ -2,6 +2,8 @@
 
 A character detection pipeline based on [DTLR](https://github.com/raphael-baena/DTLR). Most of the work is done in the submodules.
 
+---
+
 ## STRUCTURE
 
 ```
@@ -13,7 +15,9 @@ root/
  |_LinePredictor              # step 1: line detection
 ```
 
-## SETUP AND USE
+---
+
+## SETUP 
 
 ### Clone
 
@@ -54,6 +58,8 @@ git submodule init && git submodule update
 	# python models/dino/ops/setup.py build install
 	# python models/dino/ops/test.py
 	```
+
+--- 
 
 ## USE
 
