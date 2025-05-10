@@ -60,6 +60,18 @@ git submodule init && git submodule update
 Use the scripted install:
 
 ```bash
-bash pipeline.sh
+bash pipeline.sh [-s]  # the -s option allows to only process the first 10 images
+```
+
+Or do it manually:
+
+```bash
+source venv/bin/activate
+
+# step 1: line dedection
+python LinePredictor/pipeline_inference.py -i ./data -o ./data_line_prediction/ [-s]
+
+# step 2: character detection
+python DTLR/pipeline_inference.py -i ./data -b ./data_line_prediction -o ./data_character_detection
 ```
 
