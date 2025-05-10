@@ -57,7 +57,7 @@ git submodule init && git submodule update
 
 ## USE
 
-Use the scripted install:
+Use the scriptes pipeline:
 
 ```bash
 bash pipeline.sh [-s]  # the -s option allows to only process the first 10 images
