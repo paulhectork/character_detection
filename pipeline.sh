@@ -7,7 +7,7 @@ set -e
 
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
-VENV_DIR="$SCRIPT_DIR/venv"
+VENV_DIR="$SCRIPT_DIR"/venv
 DATA_DIR="$SCRIPT_DIR"/data
 DATA_LP_DIR="$SCRIPT_DIR"/data_line_prediction
 DATA_DTLR_DIR="$SCRIPT_DIR"/data_character_detection
