@@ -66,7 +66,7 @@ git submodule init && git submodule update
 Use the scripted pipeline:
 
 ```bash
-bash pipeline.sh [-s]  # the -s option allows to only process the first 10 images
+bash pipeline.sh [-s|-v] 
 ```
 
 Or do it manually:
