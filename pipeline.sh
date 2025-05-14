@@ -66,7 +66,7 @@ if "$VISUALIZE"; then
     python "$DTLR_DIR"/pipeline_inference.py\
         -i "$DATA_DIR"\
         -b "$DATA_LP_DIR"\
-        -o "$DATA_DTLR_DIR"
+        -o "$DATA_DTLR_DIR"\
         -v
 elif "$SAMPLE"; then
     python "$LP_DIR"/pipeline_inference.py\
