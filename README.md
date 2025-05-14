@@ -75,9 +75,9 @@ Or do it manually:
 source venv/bin/activate
 
 # step 1: line dedection
-python LinePredictor/pipeline_inference.py -i ./data -o ./data_line_prediction/ [-s]
+python LinePredictor/pipeline_inference.py -i ./data -o ./data_line_prediction/ [-s|-v]
 
 # step 2: character detection
-python DTLR/pipeline_inference.py -i ./data -b ./data_line_prediction -o ./data_character_detection
+python DTLR/pipeline_inference.py -i ./data -b ./data_line_prediction -o ./data_character_detection [-s|-v]
 ```
 
