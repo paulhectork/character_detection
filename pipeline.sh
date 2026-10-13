@@ -7,7 +7,6 @@ set -e
 
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
-VENV_DIR="$SCRIPT_DIR"/venv
 DATA_DIR="$SCRIPT_DIR"/data
 DATA_LP_DIR="$SCRIPT_DIR"/data_line_prediction
 DATA_DTLR_DIR="$SCRIPT_DIR"/data_character_detection
@@ -17,7 +16,8 @@ DTLR_DIR="$SCRIPT_DIR"/DTLR
 SAMPLE=false
 VISUALIZE=false
 
-UV="uv run --directory='$SCRIPT_DIR'"
+UV="uv run"
+# --directory='$SCRIPT_DIR'"
 
 # ---------------------------------------
 # functions
@@ -49,10 +49,6 @@ while getopts 'svh' flag; do
            exit 1;;
     esac
 done
-
-if [ ! -d "$VENV_DIR" ]; then echo "virtual env 'venv' not found (at '$VENV_DIR'). exiting" && exit 1; fi
-
-source "$VENV_DIR"/bin/activate
 
 if "$VISUALIZE"; then
     # step 1
@@ -91,4 +87,3 @@ else
         -b "$DATA_LP_DIR"\
         -o "$DATA_DTLR_DIR"
 fi
-
