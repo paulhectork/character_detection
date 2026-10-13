@@ -17,18 +17,20 @@ DTLR_DIR="$SCRIPT_DIR"/DTLR
 SAMPLE=false
 VISUALIZE=false
 
+UV="uv run --directory='$SCRIPT_DIR'"
+
 # ---------------------------------------
 # functions
 
 print_usage() {
     cat<<EOF
 
-USAGE bash pipeline.sh [-s]
+USAGE bash pipeline.sh [-s|-v]?
 
     run the character detection pipeline
 
     -s : run the pipeline on a sample of 10 images (instead of 6000+ images)
-    -v: produce visualizations instead of saving bounding boxes JSON (will process only the first 10 images)
+    -v : produce visualizations instead of saving bounding boxes JSON (will process only the first 10 images)
 
 EOF
 }
@@ -54,37 +56,37 @@ source "$VENV_DIR"/bin/activate
 
 if "$VISUALIZE"; then
     # step 1
-    python "$LP_DIR"/pipeline_inference.py\
+    $UV "$LP_DIR"/pipeline_inference.py\
         -i "$DATA_DIR"\
         -o "$DATA_LP_DIR"\
         -s
-    python "$LP_DIR"/pipeline_inference.py\
+    $UV "$LP_DIR"/pipeline_inference.py\
         -i "$DATA_DIR"\
         -o "$DATA_LP_DIR"\
         -v
     # step 2
-    python "$DTLR_DIR"/pipeline_inference.py\
+    $UV "$DTLR_DIR"/pipeline_inference.py\
         -i "$DATA_DIR"\
         -b "$DATA_LP_DIR"\
         -o "$DATA_DTLR_DIR"\
         -v
 elif "$SAMPLE"; then
-    python "$LP_DIR"/pipeline_inference.py\
+    $UV "$LP_DIR"/pipeline_inference.py\
         -i "$DATA_DIR"\
         -o "$DATA_LP_DIR"\
         -s
     # step 2
-    python "$DTLR_DIR"/pipeline_inference.py\
+    $UV "$DTLR_DIR"/pipeline_inference.py\
         -i "$DATA_DIR"\
         -b "$DATA_LP_DIR"\
         -o "$DATA_DTLR_DIR"\
         -s
 else
-    python "$LP_DIR"/pipeline_inference.py\
+    $UV "$LP_DIR"/pipeline_inference.py\
         -i "$DATA_DIR"\
         -o "$DATA_LP_DIR"
     # step 2
-    python "$DTLR_DIR"/pipeline_inference.py\
+    $UV "$DTLR_DIR"/pipeline_inference.py\
         -i "$DATA_DIR"\
         -b "$DATA_LP_DIR"\
         -o "$DATA_DTLR_DIR"

@@ -3,11 +3,13 @@ cython
 wheel
 ipykernel
 pandas
---extra-index-url https://download.pytorch.org/whl/cu124
+--extra-index-url https://download.pytorch.org/whl/cu132
 scikit-image
 submitit
-scipy<1.13
+#scipy<1.13
+scipy
 pytorch-ignite
+#yapf==0.3
 yapf==0.3
 opencv-python
 timm
@@ -18,6 +20,7 @@ tqdm
 editdistance
 termcolor
 pycocotools
+#Pillow>=10.0
 Pillow>=10.0
 addict
 torch>=2.2
